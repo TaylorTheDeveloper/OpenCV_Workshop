@@ -9,13 +9,11 @@ After running the script, you'll need to do these last two steps:
 
 
 1. sudo touch /etc/ld.so.conf.d/opencv.conf
-# May need to be done manually 
 write '/usr/local/lib' to /etc/ld.so.conf.d/opencv.conf 
 
 2. sudo ldconfig
 
 3. sudo touch /etc/bash.bash.rc
-# May need to be done manually
 write
 'PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
 export PKG_CONFIG_PATH' 
