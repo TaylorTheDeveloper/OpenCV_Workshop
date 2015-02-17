@@ -5,7 +5,7 @@ I recommend downloading and using Ubuntu 14.04 for this workshop. You can run it
 To install opencv, you can do it yourself following the quick start guide at opencv.org(http://docs.opencv.org/trunk/doc/tutorials/introduction/linux_install/linux_install.html)
 or you can try an use the script provided(opencv.sh).
 
-After running the script, you'll need to do these last two steps:
+After running the script, you'll need to do these last few steps:
 
 
 1. sudo touch /etc/ld.so.conf.d/opencv.conf
