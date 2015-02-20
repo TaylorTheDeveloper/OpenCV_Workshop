@@ -8,16 +8,11 @@ from video import create_capture
 #Detect Cascades patterns with detect multiscale
 #Returns rectangle points
 def detect(img, cascade):
-    rects = cascade.detectMultiScale(img, scaleFactor=1.3, minNeighbors=4, minSize=(30, 30), flags = cv.CV_HAAR_SCALE_IMAGE)
+    rects = cascade.detectMultiScale(img, scaleFactor=1.3, minNeighbors=4, minSize=(30, 30))
     if len(rects) == 0:
         return []
     rects[:,2:] += rects[:,:2]
     return rects
-
-#Draw doge
-def draw_doge(img, file, rects, color):
-    for x1, y1, x2, y2 in rects:
-        cv2.rectangle(img, (x1, y1), (x2, y2), color, 2)
 
 # Draw Rectangle helper function
 def draw_rects(img, rects, color):
@@ -45,7 +40,7 @@ if __name__ == '__main__':
     #cascade_fn = "cascades/lbpcascade_seminole.xml"
     #cascade_fn = "cascades/haarcascade_nose.xml"
     #cascade_fn = "cascades/haarcascade_face.xml"
-    #cascade_fn = "cascades/haarcascade_eye.xml"
+    cascade_fn = "cascades/haarcascade_eye.xml"
     nested_fn  = "cascades/haarcascade_eye.xml"
 
     cascade = cv2.CascadeClassifier(cascade_fn)
